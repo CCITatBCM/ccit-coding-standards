@@ -1,0 +1,25 @@
+[tool.black]
+line-length = 88
+skip-string-normalization = true
+target-version = ['py38']
+include = '\.pyi?$'
+exclude = '''
+/(
+    \.git
+  | \.mypy_cache
+  | \.tox
+  | \.venv
+  | _build
+  | buck-out
+  | build
+  | dist
+  | migrations
+  | vendor/jvectormap
+)/
+'''
+
+[tool.isort]
+profile = "black"
+known_first_party = ["appname"] # Change this to your app name.
+multi_line_output = 3
+default_section = "THIRDPARTY"

@@ -1,0 +1,30 @@
+# http://editorconfig.org
+
+root = true
+
+[*]
+indent_style = space
+indent_size = 2
+insert_final_newline = true
+trim_trailing_whitespace = true
+end_of_line = lf
+charset = utf-8
+
+[*.py]
+indent_size = 4
+max_line_length = 88
+
+# The JSON files contain newlines inconsistently
+[*.json]
+insert_final_newline = unset
+
+[*.md]
+trim_trailing_whitespace = false
+
+[Makefile]
+indent_style = tab
+
+# Minified JavaScript & CSS files shouldn't be changed
+[**.min.{js,css}]
+indent_style = unset
+insert_final_newline = unset
